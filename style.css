@@ -1,0 +1,9 @@
+.box {
+  width: 1000px;
+  height: 2000px;
+  /* background-color: red;
+  background-image: url("./image3.jpg");
+  background-position: center;
+  background-repeat: repeat-y; */
+  background: url(./image1.jpg) center/contain repeat red;
+}

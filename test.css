@@ -1,0 +1,197 @@
+body {
+  height: 2000px;
+}
+
+section.parent {
+  width: 700px;
+  height: 600px;
+  background-color: aqua;
+  position: relative;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.item1 {
+  background-color: red;
+  /* position: sticky;
+  top: 20px; */
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  /* position: relative;
+  top: 100px;
+  right: 20px; */
+}
+
+.item2 {
+  background-color: blue;
+}
+
+/* ------------------media query ------------------------ */
+
+section.parent {
+  width: 100%;
+  height: 500px;
+  background-color: aquamarine;
+  /* display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center; */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.item1 {
+  background-color: blueviolet;
+}
+
+.item2 {
+  background-color: chocolate;
+}
+
+/* @media (max-width: 800px) {
+  body {
+    background-color: blue;
+  }
+} */
+
+@media (max-width: 700px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media (max-width: 500px) {
+  /* #box-parent {
+    flex-direction: column;
+    align-items: center;
+  } */
+  /* section.parent {
+    flex-direction: column;
+    align-items: center;
+  } */
+  body {
+    background-color: red;
+  }
+}
+
+/* ------------flex box ------------------ */
+
+section.parent {
+  width: 100%;
+  height: 1000px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* gap: 30px; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+}
+
+.item1 {
+  background-color: blueviolet;
+}
+
+.item2 {
+  background-color: chocolate;
+  /* align-self: center; */
+  flex-basis: 500px;
+  /* width: 500px; */
+}
+
+.item3 {
+  background-color: bisque;
+}
+
+.item4 {
+  background-color: brown;
+}
+
+.item5 {
+  background-color: cadetblue;
+  /* flex-shrink: 10; */
+}
+
+.item6 {
+  background-color: darkgrey;
+}
+
+/* --------------- after before ------------------------- */
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: blanchedalmond;
+  position: relative;
+}
+
+.box::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+  background-color: aquamarine;
+  opacity: 0.5;
+  position: absolute;
+  /* top: -10px;
+  right: -10px; */
+}
+
+/* p::after {
+  content: "hello world";
+  background-color: red;
+}
+
+label:after {
+  content: "*";
+  color: red;
+} */
+
+/* ----------- transform transition --------------- */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+section {
+  background-color: aqua;
+} */
+
+.box {
+  width: 150px;
+  height: 250px;
+  background-color: purple;
+  border-radius: 10px;
+  /* transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease; */
+  transition: all 0.2s ease;
+}
+
+.box:hover {
+  /* background-color: blue; */
+  /* border-radius: 50%; */
+  transform-origin: top left;
+  /* transform: scale(1.5); */
+  transform: rotate(45deg);
+  /* transform: perspective(200px) rotateY(40deg) scale(1.5); */
+}
